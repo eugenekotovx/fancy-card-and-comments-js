@@ -1,16 +1,10 @@
-// Test import of a JavaScript function
-import { example } from "./js/example";
-import { loadComments } from "./js/comments"
-// Test import of an asset
-import webpackLogo from "./images/webpack-logo.svg";
+// import of a JavaScript function
+import { loadCard } from "./js/card.js";
 
-// Test import of styles
-import "./styles/index.scss";
+// styles
+import "./styles/index.css";
 import "./semantic/semantic.min.css";
 
 // Listeners
-const app = document.querySelector("#root");
 
-// Appending to the DOM
-document.addEventListener('load', loadComments())
-app.append();
+document.addEventListener("load", loadCard());
