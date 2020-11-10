@@ -1,7 +1,7 @@
 {
   "name": "webpack-boilerplate",
   "version": "2.0.0",
-  "description": "Comments vanilla js.",
+  "description": "Fancy card and comments js",
   "main": "index.js",
   "author": "Eugene Kotov",
   "scripts": {
