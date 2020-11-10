@@ -1,0 +1,25 @@
+body {
+  background: #F5F5F8;
+}
+
+#comments-container {
+  width: 100%;
+}
+
+#root {
+  margin: 0 auto;
+  max-width: 650px;
+}
+
+.label {
+  z-index: 2;
+}
+
+.button {
+  z-index: 1;
+}
+
+.comments {
+  display: flex;
+  flex-direction: column-reverse;
+}
