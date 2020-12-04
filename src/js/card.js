@@ -3,7 +3,8 @@ import { newCommentListener } from "./comment.js";
 import { setComments } from "./comments.js";
 import { sorter } from "./helpers.js";
 import { dateFormatter } from "./helpers.js";
-
+const avatarSrc =
+  "https://www.flaticon.com/svg/static/icons/svg/747/747376.svg";
 const app = document.querySelector("#card");
 
 let commentCounter = document.querySelector(".comment-counter");
@@ -12,7 +13,7 @@ class Card {
   constructor(info) {
     this.name = info.name;
     this.id = info.id;
-    this.avatar = info.avatar;
+    this.avatar = avatarSrc;
     this.image = info.image;
     this.text = info.text;
     this.like = info.like;

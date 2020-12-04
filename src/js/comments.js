@@ -5,14 +5,15 @@ let comments = [];
 
 const commentCounter = document.querySelector(".comment-counter");
 const commentsContainer = document.querySelector("#comments-container");
-
+const avatarSrc =
+  "https://www.flaticon.com/svg/static/icons/svg/747/747376.svg";
 export class Comment {
   constructor(comment) {
     this.comment = comment.comment;
     this.id = comment.id;
     this.name = comment.name;
     this.like = comment.like;
-    this.avatar = comment.avatar;
+    this.avatar = avatarSrc;
     this.liked = false;
     this.createdAt = dateFormatter(comment.createdAt);
 
@@ -24,7 +25,6 @@ export class Comment {
     commentsWrapper.innerHTML = this.template();
     commentsWrapper.classList.add("ui", "comment");
     commentsContainer.append(commentsWrapper);
-
     const btn = commentsWrapper.querySelector(".like-button");
     btn.addEventListener("click", (e) => {
       this.updateLike(e);
