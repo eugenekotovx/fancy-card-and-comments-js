@@ -3,16 +3,13 @@ import { dateFormatter } from "./helpers";
 import { Comment } from "./comments.js";
 import { validationListener, showError } from "./validation.js";
 
-const createComment = () => {
+const createComment = (name, text) => {
   let newComment = {};
   newComment.comment = text.value;
   newComment.name = name.value;
   newComment.like = 0;
-  newComment.avatar =
-    "https://www.flaticon.com/svg/static/icons/svg/747/747376.svg";
   newComment.liked = false;
   newComment.createdAt = dateFormatter(new Date());
-
   new Comment(newComment);
 };
 
@@ -29,11 +26,13 @@ export const newCommentListener = () => {
   form.addEventListener("submit", (e) => {
     e.preventDefault();
     if (text.classList.contains("valid") && name.classList.contains("valid")) {
-      createComment();
+      createComment(name, text);
       commentCounter.innerHTML = counter += 1;
 
       text.value = "";
       name.value = "";
+      text.classList.remove("valid")
+      name.classList.remove("valid")
     } else if (
       !text.classList.contains("valid") &&
       !name.classList.contains("valid")
