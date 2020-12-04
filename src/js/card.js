@@ -81,7 +81,7 @@ class Card {
    <input id="name" class="valid-input" placeholder="Your name" data-name="name"></input>
    <textarea id="text" class="valid-input" placeholder="Your commentary" data-name="comment"></textarea>
    </div>
-   <button type="submit" class="ui blue labeled submit icon button" id="button"><i class="icon edit"></i> Добавить ответ </button>
+   <button type="submit" class="ui blue labeled submit icon button" id="button"><i class="icon edit"></i> Add comment </button>
    </form>
     `;
   }
